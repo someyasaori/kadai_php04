@@ -9,6 +9,17 @@
 </head>
 <body>
 
+<header>
+    <nav class="header-wrapper">
+        <ul class="inner">
+            <li><a href="user_index.php"><a href="index.php">お役立ち資料 目次に戻る</a></a></li>
+            <li><a href="select_limited.php"><a href="user_select.php">登録済みユーザーを表示</a></a></li>
+            <li><a href="logout.php">ログアウト</a></li>
+            <li><a href="login.php">ログイン</a></li>
+        </ul>
+    </nav>
+</header>
+
 <h1>ユーザー管理画面</h1>
 <main>
     <h2>新規ユーザー登録</h2>
@@ -27,10 +38,7 @@
         </p>
         <p class="centering"><input type="submit" id="submit" value="登録"></p>
     </form>
-<p class="all">
-    <a href="user_select.php">登録済みユーザーを表示（編集・削除もこちら）</a>
-    <a href="index.php">お役立ち資料 目次に戻る</a>
-</p>
+
 
 </main>
 </body>

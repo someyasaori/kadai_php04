@@ -8,14 +8,19 @@
     <title>お役立ちリンク集</title>
 </head>
 <body>
+
+<header>
+    <nav class="header-wrapper">
+        <ul class="inner">
+            <li><a href="user_index.php">ユーザー管理画面（管理者のみ）</a></li>
+            <li><a href="select_limited.php">ログインせずにリスト概要を見る</a></li>
+            <li><a href="logout.php">ログアウト</a></li>
+            <li><a href="login.php">ログイン</a></li>
+        </ul>
+    </nav>
+</header>
+
 <h1>お役立ち資料　目次</h1>
-
-<p><a href="login.php">ログイン</a></p>
-<p><a href="logout.php">ログアウト</a></p>
-<p><a href="select_limited.php">ログインせずにリスト概要を見る</a></p>
-<p><a href="user_index.php">ユーザー管理画面（管理者のみ）</a></p>
-
-
 <main>
 <div class="sub">
     <h2>新しい資料を登録</h2>

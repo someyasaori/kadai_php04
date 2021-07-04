@@ -1,5 +1,24 @@
 /* 登録インプット index.php*/
 
+.header-wrapper ul{
+    overflow: hidden;
+    padding-right: 30px;
+}
+.header-wrapper li{
+    float: right;
+    /* width: 200px; */
+    font-size: 15px;
+    margin: 10px;
+}
+
+.header-wrapper ul li{
+    display: inline;
+}
+
+li:hover{
+    background-color:#ffffe0;
+}
+
 main{
     max-width:1200px;
     height: auto;
@@ -16,6 +35,7 @@ h1{
     background: linear-gradient(transparent 60%, #98fb98 40%);
     text-align: center;
     margin:auto;
+    margin-top:30px;
 }
 
 h2{

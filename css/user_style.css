@@ -1,4 +1,24 @@
-/* 登録 index.php*/
+/* 登録 user_index.php*/
+
+.header-wrapper ul{
+    overflow: hidden;
+    padding-right: 30px;
+}
+.header-wrapper li{
+    float: right;
+    /* width: 200px; */
+    font-size: 15px;
+    margin: 10px;
+}
+
+.header-wrapper ul li{
+    display: inline;
+}
+
+li:hover{
+    background-color:#ffffe0;
+}
+
 
 main{
     max-width:1200px;
@@ -12,6 +32,7 @@ h1{
     color:#00008b;
     font-weight:bold;
     text-align: center;
+    margin-top:30px;
 }
 
 h2{
