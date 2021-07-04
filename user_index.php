@@ -29,6 +29,7 @@
     </form>
 <p class="all">
     <a href="user_select.php">登録済みユーザーを表示（編集・削除もこちら）</a>
+    <a href="index.php">お役立ち資料 目次に戻る</a>
 </p>
 
 </main>

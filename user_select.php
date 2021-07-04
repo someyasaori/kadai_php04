@@ -1,4 +1,16 @@
 <?php
+// //Sessionスタート
+session_start();
+
+// //関数を呼び出す
+require_once('funcs.php');
+
+// //ログインチェック
+// loginCheck();
+$user_name = $_SESSION['name'];
+$kanri = $_SESSION['kanri_flg'];
+
+if ($kanri == "1") {
 
 //DB接続
 require_once('funcs.php');
@@ -21,6 +33,10 @@ if ($status == false) {
         $view .= "</tr>";
     }
 }   
+
+} else {
+    exit ("管理者としてログインしてください");
+}
 
 ?>
 
@@ -50,6 +66,6 @@ if ($status == false) {
 </table>
 
 <p class="return"><a href="user_index.php">新規登録画面へ</a></p>
-
+<p class="return"><a href="index.php">お役立ち資料 目次に戻る</a></p>
 </body>
 </html>

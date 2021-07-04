@@ -1,13 +1,13 @@
 <?php
-// // //Sessionスタート
-// session_start();
+// //Sessionスタート
+session_start();
 
-// // //関数を呼び出す
-// require_once('funcs.php');
+// //関数を呼び出す
+require_once('funcs.php');
 
-// // //ログインチェック
-// // loginCheck();
-// $user_name = $_SESSION['name'];
+// //ログインチェック
+// loginCheck();
+$user_name = $_SESSION['name'];
 
 //以降はログインユーザーのみ
 
@@ -30,8 +30,7 @@ $pdo = db_conn();
 //データ登録（SQL文はINSERT）
 $stmt = $pdo->prepare(
   "INSERT INTO gs_bm_table(id,title,url,details,tag,indate)
-  VALUES(NULL, :title, :url, :details, :tag, sysdate())"
-);
+  VALUES(NULL, :title, :url, :details, :tag, sysdate())");
 
 //バインド変数（ハッキング/SQL Injection防止
 $stmt->bindValue(':title', $title, PDO::PARAM_STR);
@@ -43,14 +42,21 @@ $stmt->bindValue(':tag', $tag, PDO::PARAM_STR);
 //登録実行
 $status = $stmt->execute();
 
-//データ登録処理後エラーがあった場合
+// 6．データ登録処理後
+// if($status==false){
+//   //SQL実行時にエラーがある場合（エラーオブジェクト取得して表示）
+//   $error = $stmt->errorInfo();
+//   exit("ErrorMassage:".$error[2]);
+// }else{
+//   //５．index.phpへリダイレクト
+//   header('Location:select.php');
+
+// }
+
 if($status==false){
-    $error = $stmt->errorInfo();
+  sql_error($stmt);
 }else{
-
-//エラー無ければindex.phpヘリダイレクト
-header('Location: index.php');
-
+  redirect("select.php");
 }
 
 ?>

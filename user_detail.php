@@ -56,6 +56,7 @@ if ($status == false) {
     <a href="user_select.php">登録済みユーザーを表示（編集・削除もこちら）</a>
     <br>
     <a href="user_index.php">新規登録画面へ</a>
+    <a href="index.php">お役立ち資料 目次に戻る</a>
 </p>
 
 </main>

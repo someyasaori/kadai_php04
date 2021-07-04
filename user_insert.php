@@ -1,4 +1,14 @@
 <?php
+//Sessionスタート
+session_start();
+
+//関数を呼び出す
+require_once('funcs.php');
+
+//ログインチェック
+// loginCheck();
+$user_name = $_SESSION['name'];
+$kanri = $_SESSION['kanri_flg'];
 
 //POSTデータを取得
 $name = $_POST["name"];
@@ -14,9 +24,11 @@ $life_flg = $_POST["life_flg"];
 //   } catch (PDOException $e) {
 //     exit('DBConnectError:'.$e->getMessage());
 //   }
+//管理者のみが新規ユーザーを登録できる
+if ($kanri == "1") {
 
-require_once('funcs.php');
-$pdo = db_conn2();
+    require_once('funcs.php');
+    $pdo = db_conn2();
 
 //データ登録（SQL文）
 $stmt = $pdo->prepare(
@@ -41,6 +53,8 @@ if($status==false){
 
 }
 
-
+} else {
+    exit ("管理者としてログインしてください");
+}
 
 ?>
