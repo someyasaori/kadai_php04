@@ -28,7 +28,7 @@ $life_flg = $_POST["life_flg"];
 if ($kanri == "1") {
 
     require_once('funcs.php');
-    $pdo = db_conn2();
+    $pdo = db_conn();
 
 //データ登録（SQL文）
 $stmt = $pdo->prepare(

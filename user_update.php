@@ -11,7 +11,7 @@ $id = $_POST["id"];
 
 //DB接続（mysql）
 require_once('funcs.php');
-$pdo = db_conn2();
+$pdo = db_conn();
 
 //データ更新SQL作成
 $stmt = $pdo->prepare("UPDATE gs_user_table SET name = :name, lid = :lid, lpw = :lpw, kanri_flg= :kanri_flg, life_flg = :life_flg WHERE id = :id;" );

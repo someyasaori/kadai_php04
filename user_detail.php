@@ -2,7 +2,7 @@
 
 //外部ファイルから関数を読み込みDB接続（funcs.php）
 require_once('funcs.php');
-$pdo = db_conn2();
+$pdo = db_conn();
 
 //編集対象のIDをGET通信で取得
 $id = $_GET['id'];

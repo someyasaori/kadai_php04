@@ -9,10 +9,10 @@ function h($str)
 //DB接続関数。関数を作成し内容をReturnする。DB Nameを適宜修正。
 function db_conn(){
     try {
-        $db_name = "power_links";    //データベース名
-        $db_id   = "root";      //アカウント名
-        $db_pw   = "root";      //パスワード：XAMPPはパスワード無しに修正してください。
-        $db_host = "localhost"; //DBホスト
+        $db_name = "mil2021_saori";    //データベース名
+        $db_id   = "mil2021";      //アカウント名
+        $db_pw   = "J62bVHcgHEbJjVv";      //パスワード：XAMPPはパスワード無しに修正してください。
+        $db_host = "mysql1037.db.sakura.ne.jp"; //DBホスト
         $pdo = new PDO('mysql:dbname=' . $db_name . ';charset=utf8;host=' . $db_host, $db_id, $db_pw);
     return $pdo; //一行追記 
     } catch (PDOException $e) {

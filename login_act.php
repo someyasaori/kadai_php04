@@ -8,7 +8,7 @@ $lpw = $_POST['lpw'];
 
 //DB接続
 require_once('funcs.php');
-$pdo = db_conn2();
+$pdo = db_conn();
 
 //SQLで登録済みデータのうちIDが一致するものを探す
 $stmt = $pdo->prepare("SELECT * FROM gs_user_table WHERE lid = :lid");

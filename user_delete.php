@@ -4,7 +4,7 @@ $id =$_GET["id"];
 
 //DB接続
 require_once('funcs.php');
-$pdo = db_conn2();
+$pdo = db_conn();
 
 //削除SQL
 $stmt = $pdo->prepare("DELETE FROM gs_user_table WHERE id=:id");

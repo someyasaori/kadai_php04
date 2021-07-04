@@ -14,7 +14,7 @@ if ($kanri == "1") {
 
 //DB接続
 require_once('funcs.php');
-$pdo = db_conn2();
+$pdo = db_conn();
 
 //実行
 $stmt = $pdo->prepare("SELECT * FROM gs_user_table");
